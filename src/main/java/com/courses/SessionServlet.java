@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Stepan
@@ -24,8 +26,13 @@ public class SessionServlet extends HttpServlet {
             name = req.getParameter("name");
             session.setAttribute("name", name);
         }
+        List<String> list = new ArrayList<>();
+        list.add("One");
+        list.add("Two");
+        list.add("Three");
 
-       /* RequestDispatcher rd = req.getRequestDispatcher("/output-servlet");
+        req.setAttribute("list",list);
+        /* RequestDispatcher rd = req.getRequestDispatcher("/output-servlet");
         rd.forward(req, resp);*/
 
        RequestDispatcher rd = req.getRequestDispatcher("pages/output.jsp");
