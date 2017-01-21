@@ -25,8 +25,11 @@ public class SessionServlet extends HttpServlet {
             session.setAttribute("name", name);
         }
 
-        RequestDispatcher rd = req.getRequestDispatcher("/output-servlet");
-        rd.forward(req, resp);
+       /* RequestDispatcher rd = req.getRequestDispatcher("/output-servlet");
+        rd.forward(req, resp);*/
+
+       RequestDispatcher rd = req.getRequestDispatcher("pages/output.jsp");
+       rd.forward(req,resp);
 
     }
 
