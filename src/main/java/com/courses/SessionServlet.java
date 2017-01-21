@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * @author Stepan
  */
-@WebServlet(urlPatterns = "/session")
+@WebServlet(name = "sessionServlet",urlPatterns = "/session")
 public class SessionServlet extends HttpServlet {
 
     @Override

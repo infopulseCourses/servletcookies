@@ -19,12 +19,14 @@ public class OutputServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         String name = (String) session.getAttribute("name");
+        String filter = (String) req.getAttribute("filter");
 
         resp.setContentType("text/html");
 
         PrintWriter writer = resp.getWriter();
         writer.println("<html><body>");
         writer.println("<h2>" + name + "</h2>");
+        writer.println("<h2>" + filter + "</h2>");
         writer.print("</body></html>");
         writer.close();
 
