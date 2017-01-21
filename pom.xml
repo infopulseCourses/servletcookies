@@ -33,6 +33,11 @@
             <artifactId>javax.servlet</artifactId>
             <version>3.0.0.v201112011016</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+            <version>7.0.30</version>
+        </dependency>
 
     </dependencies>
 
